@@ -135,3 +135,66 @@ if (A < B && B < C) {
 console.log("A:", A, "B:", B, "C:", C);
 
 //if 14
+let A = 10, B = 6, C = 2;
+
+if ((A < B && B < C) || (A > B && B > C)) {
+  A *= 2;
+  B *= 2;
+  C *= 2;
+} else {
+  A = -A;
+  B = -B;
+  C = -C;
+}
+
+console.log("A:", A, "B:", B, "C:", C);
+
+//if 15
+let a = 7, b = 7, c = 7, d = 3;
+
+if (a === b && a === c) console.log("4-son boshqacha");
+else if (a === b && a === d) console.log("3-son boshqacha");
+else if (a === c && a === d) console.log("2-son boshqacha");
+else if (b === c && b === d) console.log("1-son boshqacha");
+else console.log("Mos keladigan 3 ta teng son topilmadi");
+
+//if 16
+let x = 1.5;
+let natija;
+
+if (x <= 0) {
+  natija = -x;
+} else if (x < 2) {
+  natija = x * x;
+} else {
+  natija = 4;
+}
+
+console.log("F(x) =", natija);
+
+//if 17
+let yil = 2024;
+let kunlar;
+
+if ((yil % 4 === 0 && yil % 100 !== 0) || yil % 400 === 0) {
+  kunlar = 366;
+} else {
+  kunlar = 365;
+}
+
+console.log(yil + " yilda", kunlar, "kun bor");
+
+//if 18
+let son = 247;
+
+if (son < 1 || son > 999) {
+  console.log("Noto‘g‘ri son kiritildi.");
+} else {
+  let xonalar = (son < 10) ? "bir xonali" :
+                (son < 100) ? "ikki xonali" :
+                "uch xonali";
+
+  let juftlik = (son % 2 === 0) ? "juft son" : "toq son";
+
+  console.log(`${xonalar} ${juftlik}`);
+}
